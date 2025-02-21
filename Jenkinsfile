@@ -17,12 +17,16 @@ pipeline {
 
                 # TODO fill out the path to conda here
                 # sudo /PATH/TO/CONDA init
+                export PATH="/Users/allyne/anaconda3/bin:/Users/allyne/anaconda3/condabin:$PATH"
+                conda init bash
 
                 # TODO Complete the command to run pytest
                 # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
+                conda activate aieng-lab6
+                pytest test_utility.py
 
-                echo 'pytest not runned'
-                exit 1 #comment this line after implementing Jenkinsfile
+                # echo 'pytest not runned'
+                # exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
             }
